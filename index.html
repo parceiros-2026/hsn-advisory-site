@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSN Advisory — Consultoria Corporativa &amp; Negócios Internacionais</title>
+<meta name="description" content="Consultoria executiva especializada em Gestão Corporativa e Negócios Internacionais: inteligência estratégica, governança, logística global e expansão cross-border com foco em LATAM.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<meta property="og:title" content="HSN Advisory — Gestão Corporativa & Negócios Internacionais">
+<meta property="og:description" content="Clareza analítica, resultados materiais: estruturamos operações cross-border sustentáveis e de alto rendimento.">
+<meta property="og:image" content="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"HSN Advisory",
+"description":"Consultoria executiva em Gestão Corporativa e Negócios Internacionais.",
+"areaServed":["Brasil","América Latina"],"knowsAbout":["Gestão corporativa","Comércio exterior","Logística internacional","Expansão LATAM","Go-to-market"]}
+</script>
+<style>
+:root{
+  --navy:#0D1B2A; --navy2:#122539; --navy3:#1A3049;
+  --gold:#E0A94F; --gold-d:#C9963D; --gold-dark:#8A6A2A;
+  --silver:#E6E9EC; --tint:#F4F6F9; --line:#D9E0E8;
+  --ink:#16243A; --body:#3A4A5E; --muted:#6B7A90;
+  --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --w:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--body);background:#fff;line-height:1.65;font-size:16.5px}
+img{display:block;max-width:100%}
+section{scroll-margin-top:84px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d)}
+.h2{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:600;color:var(--navy);line-height:1.15;margin:14px 0 18px}
+.lead{max-width:720px;font-size:17.5px}
+.goldline{width:64px;height:2px;background:var(--gold);margin:22px 0}
+
+/* ---------- nav ---------- */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .3s,box-shadow .3s;padding:16px 0}
+nav .wrap{display:flex;align-items:center;gap:34px}
+nav.solid{background:rgba(13,27,42,.96);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(13,27,42,.25);padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:8px;box-shadow:0 3px 12px rgba(0,0,0,.35)}
+.brand b{font-family:var(--serif);font-size:21px;color:#fff;font-weight:600;letter-spacing:.02em}
+.brand span{display:block;font-size:9.5px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;font-weight:600}
+.navlinks{display:flex;gap:26px;margin-left:auto;align-items:center}
+.navlinks a{color:#D7DEE8;text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.02em;transition:color .2s}
+.navlinks a:hover{color:var(--gold)}
+.btn{display:inline-block;padding:13px 30px;border-radius:4px;font-weight:600;font-size:14.5px;letter-spacing:.04em;text-decoration:none;transition:transform .18s,box-shadow .18s,background .18s}
+.btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 8px 22px rgba(224,169,79,.35)}
+.btn-gold:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(230,233,236,.45);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy3);transform:translateY(-2px)}
+
+/* ---------- hero ---------- */
+header.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
+  background:linear-gradient(150deg,#0D1B2A 0%,#0F2033 52%,#13293F 100%)}
+header.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(48% 58% at 76% 44%,rgba(224,169,79,.09),transparent 72%),
+  radial-gradient(42% 50% at 8% 88%,rgba(26,48,73,.7),transparent 72%)}
+.hero-motif{position:absolute;right:-9%;top:50%;transform:translateY(-50%);width:min(720px,56vw);pointer-events:none}
+.hero-inner{padding:140px 0 120px;max-width:860px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,5.2vw,62px);line-height:1.12;margin:20px 0 24px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:18px;color:#D9E1EA;max-width:640px}
+.hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+.hero-stats{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(230,233,236,.14);background:rgba(13,27,42,.55);backdrop-filter:blur(6px)}
+.hero-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:20px;padding-bottom:20px}
+.stat b{display:block;font-family:var(--serif);font-size:26px;color:var(--gold);font-weight:600}
+.stat span{font-size:12.5px;color:#AEBACB;letter-spacing:.05em}
+
+/* ---------- sobre ---------- */
+#hsn{padding:110px 0 90px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.pillars{list-style:none;margin-top:26px}
+.pillars li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.pillars li:first-child{border-top:1px solid var(--line)}
+.pillars .dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:9px}
+.pillars b{color:var(--navy);font-size:16px}
+.pillars p{font-size:14.5px;color:var(--muted)}
+.frame{position:relative}
+.frame img{border-radius:6px;box-shadow:0 30px 60px rgba(13,27,42,.22);position:relative;z-index:1}
+.frame::after{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--gold);border-radius:6px;z-index:0}
+.frame figcaption{margin-top:16px;font-size:12.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.fronts{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:64px}
+.front{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:30px 30px 26px;background:#fff}
+.front .fk{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-dark)}
+.front h3{font-family:var(--serif);font-size:24px;color:var(--navy);font-weight:600;margin:8px 0}
+.front p{font-size:14.5px}
+.card .front-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+#quadro{padding:104px 0}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.tcard{border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:24px 22px;background:#fff;transition:transform .2s,box-shadow .2s}
+.tcard:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(13,27,42,.10)}
+.tcard b{display:block;font-size:16px;color:var(--navy);margin-bottom:6px}
+.tcard p{font-size:13.5px;color:var(--muted)}
+.team-foot{margin-top:26px;font-size:13.5px;color:var(--muted);text-align:center}
+.plan li{font-size:13.5px}
+.plan li.grp{padding-left:0;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);margin-top:15px}
+.plan li.grp::before{content:none}
+.plan li.lead{font-weight:600;color:var(--navy)}
+.plan.silver li.grp{color:var(--gold)}
+.plan.silver li.lead{color:#fff}
+
+/* ---------- serviços ---------- */
+#servicos{background:var(--tint);padding:100px 0}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:46px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:34px 28px;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(13,27,42,.12)}
+.card:hover::before{transform:scaleX(1)}
+.card .ico{width:52px;height:52px;border-radius:6px;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ico svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-family:var(--serif);font-size:20.5px;color:var(--navy);font-weight:600;line-height:1.3;margin-bottom:10px}
+.card p{font-size:14.5px}
+.card ul{list-style:none;margin-top:14px}
+.card li{font-size:13.5px;color:var(--muted);padding:4px 0 4px 18px;position:relative}
+.card li::before{content:"›";position:absolute;left:2px;color:var(--gold);font-weight:700}
+
+/* ---------- banda porto (case) ---------- */
+.band{position:relative;color:#fff;padding:110px 0}
+.band-dark{background:linear-gradient(100deg,rgba(13,27,42,.95) 0%,rgba(13,27,42,.86) 55%,rgba(13,27,42,.62) 100%),url('assets/port-sunset.jpg') center/cover no-repeat}
+.band .kicker{color:var(--gold)}
+.band h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,40px);font-weight:600;line-height:1.2;max-width:640px;margin:14px 0 20px}
+.band p{max-width:560px;color:#D9E1EA}
+.casegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.case{border:1px solid rgba(230,233,236,.18);border-radius:6px;padding:26px 24px;background:rgba(13,27,42,.45);backdrop-filter:blur(4px)}
+.case b{display:block;font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:600;margin-bottom:6px}
+.case span{font-size:14px;color:#C3CDD9}
+.band small.tag{display:inline-block;margin-bottom:6px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#9AA7B8}
+
+/* ---------- BI split ---------- */
+#bi{padding:104px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split img{border-radius:6px;box-shadow:0 26px 52px rgba(13,27,42,.2)}
+.checklist{list-style:none;margin-top:24px}
+.checklist li{padding:11px 0 11px 34px;position:relative;font-size:15.5px;border-bottom:1px solid var(--line)}
+.checklist li:first-child{border-top:1px solid var(--line)}
+.checklist li::before{content:"";position:absolute;left:2px;top:19px;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--gold)}
+.checklist li::after{content:"";position:absolute;left:6.5px;top:23.5px;width:7px;height:4px;border-left:1.7px solid var(--gold);border-bottom:1.7px solid var(--gold);transform:rotate(-45deg)}
+
+/* ---------- método ---------- */
+#metodo{background:var(--navy);color:#fff;padding:104px 0 96px}
+#metodo .h2{color:#fff}
+#metodo .lead{color:#AEBACB}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:52px}
+.step{border:1px solid rgba(230,233,236,.14);border-radius:6px;padding:26px 20px;background:var(--navy2);transition:border-color .2s,transform .2s}
+.step:hover{border-color:var(--gold);transform:translateY(-4px)}
+.step .n{width:42px;height:42px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step h3{font-size:15.5px;color:#fff;margin-bottom:8px;font-weight:600}
+.step p{font-size:13px;color:#AEBACB}
+
+/* ---------- LATAM ---------- */
+#latam{padding:104px 0}
+.badge-latam{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold-dark);border-radius:999px;padding:7px 18px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:22px}
+
+/* ---------- planos ---------- */
+#planos{background:var(--tint);padding:104px 0}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:8px;padding:36px 32px;position:relative;display:flex;flex-direction:column}
+.plan ul{list-style:none;margin:22px 0;flex:1}
+.plan li{font-size:14px;padding:6.5px 0 6.5px 22px;position:relative;color:var(--body)}
+.plan li::before{content:"›";position:absolute;left:4px;color:var(--gold-d);font-weight:700}
+.plan .name{font-size:13px;font-weight:700;letter-spacing:.3em;color:var(--muted)}
+.plan .price{font-family:var(--serif);font-size:40px;color:var(--navy);font-weight:600;margin-top:10px}
+.plan .price small{font-family:var(--sans);font-size:14px;color:var(--muted);font-weight:400}
+.plan .price.quote{font-size:22px;letter-spacing:.02em;line-height:1.3}
+.plan .tag2{font-size:13.5px;color:var(--muted);margin-top:2px}
+.plan .note{font-size:12px;color:var(--muted);font-style:italic;margin-top:14px;border-top:1px dashed var(--line);padding-top:12px}
+.plan.silver{background:var(--navy);border:1px solid var(--gold);color:#fff;transform:translateY(-14px);box-shadow:0 30px 60px rgba(13,27,42,.28)}
+.plan.silver .name{color:var(--gold)}
+.plan.silver .price{color:#fff}
+.plan.silver .price small{color:#AEBACB}
+.plan.silver .tag2{color:#C3CDD9}
+.plan.silver li{color:#DCE3EB}
+.plan.silver .note{color:#9AA7B8;border-color:rgba(230,233,236,.2)}
+.ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.22em;padding:7px 20px;border-radius:999px}
+.plans-foot{margin-top:34px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ---------- FAQ ---------- */
+#faq{padding:104px 0}
+.faq{max-width:840px;margin:44px auto 0}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 4px;font-weight:600;color:var(--navy);font-size:16.5px}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:0 0 auto;width:26px;height:26px;border:1px solid var(--gold);border-radius:50%;color:var(--gold-dark);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500;transition:transform .2s}
+details[open] .pm{transform:rotate(45deg)}
+details p{padding:0 44px 22px 4px;font-size:15px;color:var(--body)}
+
+/* ---------- CTA final ---------- */
+#contato{position:relative;color:#fff;text-align:center;padding:120px 0;overflow:hidden;
+  background:radial-gradient(55% 70% at 50% 0%,rgba(224,169,79,.07),transparent 70%),linear-gradient(180deg,#0D1B2A 0%,#0B1622 100%)}
+#contato h2{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:600;max-width:760px;margin:16px auto 18px}
+#contato p{color:#C3CDD9;max-width:600px;margin:0 auto}
+.contact-line{margin-top:34px;font-size:15px;color:#9AA7B8}
+.contact-line b{color:var(--gold);font-weight:600}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy);border-top:1px solid rgba(230,233,236,.1);color:#9AA7B8;padding:56px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;align-items:start}
+footer .brand img{width:52px;height:52px}
+footer h4{color:#E6E9EC;font-size:13px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
+footer a{color:#9AA7B8;text-decoration:none;display:block;padding:5px 0;font-size:14px}
+footer a:hover{color:var(--gold)}
+.fbottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(230,233,236,.1);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:none}
+
+/* ---------- responsivo ---------- */
+@media(max-width:1080px){
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .navlinks a:not(.btn){display:none}
+}
+@media(max-width:880px){
+  .grid2,.split{grid-template-columns:1fr;gap:40px}
+  .fronts{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr}
+  .hero-stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .casegrid{grid-template-columns:1fr}
+  .plans{grid-template-columns:1fr;max-width:460px;margin-left:auto;margin-right:auto}
+  .plan.silver{transform:none}
+  .fgrid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .cards4{grid-template-columns:1fr}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="assets/logo.jpg" alt="HSN Advisory">
+      <div><b>HSN Advisory</b><span>Gestão Corporativa &amp; Negócios Internacionais</span></div>
+    </a>
+    <div class="navlinks">
+      <a href="#hsn">A HSN</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#metodo">Método</a>
+      <a href="#quadro">Quadro</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-gold" href="#contato" style="padding:11px 22px">Agendar conversa</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <svg class="hero-motif" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+    <defs><clipPath id="gc"><circle cx="300" cy="300" r="228"/></clipPath></defs>
+    <circle cx="300" cy="300" r="228" stroke="#E0A94F" stroke-opacity=".16"/>
+    <g clip-path="url(#gc)" stroke="#E0A94F" stroke-opacity=".10">
+      <ellipse cx="300" cy="300" rx="72" ry="228"/><ellipse cx="300" cy="300" rx="146" ry="228"/><ellipse cx="300" cy="300" rx="212" ry="228"/>
+      <ellipse cx="300" cy="118" rx="228" ry="30"/><ellipse cx="300" cy="212" rx="228" ry="48"/><ellipse cx="300" cy="330" rx="228" ry="62"/><ellipse cx="300" cy="462" rx="228" ry="40"/>
+    </g>
+    <g stroke="#E0A94F" stroke-opacity=".22">
+      <path d="M150 395 Q 300 300 435 205"/><path d="M185 445 Q 330 350 452 262"/>
+    </g>
+    <g fill="#E0A94F">
+      <circle cx="150" cy="395" r="3.2" fill-opacity=".55"/><circle cx="435" cy="205" r="3.2" fill-opacity=".55"/>
+      <circle cx="185" cy="445" r="2.6" fill-opacity=".4"/><circle cx="452" cy="262" r="2.6" fill-opacity=".4"/>
+      <circle cx="300" cy="300" r="4" fill-opacity=".7"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <span class="kicker">Consultoria executiva · cross-border</span>
+    <h1>Clareza analítica,<br>resultados <em>materiais</em> na expansão global</h1>
+    <p>A HSN Advisory é uma consultoria executiva especializada em Gestão Corporativa e Negócios Internacionais. Atuamos na interseção entre inteligência estratégica, governança e expansão global, apoiando diretorias e conselhos no desenvolvimento de operações cross-border sustentáveis e de alto rendimento.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#contato">Agendar uma conversa</a>
+      <a class="btn btn-ghost" href="#servicos">Conhecer os serviços</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="wrap">
+      <div class="stat"><b>2 frentes</b><span>gestão corporativa &amp; negócios internacionais</span></div>
+      <div class="stat"><b>5 etapas</b><span>método ponta a ponta</span></div>
+      <div class="stat"><b>48 h</b><span>para a primeira proposta de cotação</span></div>
+      <div class="stat"><b>até 73%</b><span>de redução de custo em sourcing*</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= SOBRE ======================= -->
+<section id="hsn">
+  <div class="wrap grid2">
+    <div class="rv">
+      <span class="kicker">A HSN</span>
+      <h2 class="h2">Tese de atuação: análise rigorosa,<br>execução sem ruído</h2>
+      <div class="goldline"></div>
+      <p class="lead">Nossa tese integra visão analítica e execução prática para otimizar cadeias de valor, estruturar alianças comerciais e mitigar riscos em operações internacionais.</p>
+      <ul class="pillars">
+        <li><span class="dot"></span><div><b>Inteligência estratégica</b><p>Decisões de diretoria sustentadas por dados, benchmarks e leitura de mercado.</p></div></li>
+        <li><span class="dot"></span><div><b>Governança</b><p>Processos, controles e estruturas de decisão que escalam com a operação.</p></div></li>
+        <li><span class="dot"></span><div><b>Expansão global</b><p>Operações cross-border desenhadas para serem sustentáveis — e rentáveis — desde o primeiro ciclo.</p></div></li>
+      </ul>
+    </div>
+    <figure class="frame rv">
+      <img src="assets/boardroom.jpg" alt="Sala de conselho — decisão executiva">
+      <figcaption>Decisão de diretoria · governança &amp; estratégia</figcaption>
+    </figure>
+  </div>
+  <div class="wrap fronts rv">
+    <div class="front">
+      <span class="fk">Frente 1</span>
+      <h3>Gestão Corporativa</h3>
+      <p>Estratégia, governança, BI e performance — a casa em ordem para decidir rápido e crescer com controle.</p>
+    </div>
+    <div class="front">
+      <span class="fk">Frente 2</span>
+      <h3>Negócios Internacionais</h3>
+      <p>Comércio, logística e expansão global — a operação cruzando fronteiras com custo, prazo e risco sob gestão.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SERVIÇOS ======================= -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Serviços &amp; frentes de atuação</span>
+      <h2 class="h2">Duas frentes de atuação, quatro disciplinas</h2>
+      <div class="goldline"></div>
+    </div>
+    <div class="cards4">
+      <div class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 16v-5m4 5V8m4 8v-8m4 8v-3"/></svg></div>
+        <span class="front-tag">Frente 1 · Gestão Corporativa</span>
+        <h3>Gestão Corporativa &amp; Estratégia Operacional</h3>
+        <p>Inteligência de negócios e estrutura de decisão para a alta gestão.</p>
+        <ul>
+          <li>Inteligência de negócios (BI)</li>
+          <li>Governança corporativa</li>
+          <li>Gestão de projetos corporativos</li>
+          <li>Otimização da tomada de decisão</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M2 16l20-9-4 15-6-4-3 4-1-6z"/><path d="M9 21l1-6"/></svg></div>
+        <span class="front-tag">Frente 2 · Negócios Internacionais</span>
+        <h3>Comércio Internacional &amp; Logística</h3>
+        <p>Cargas internacionais e suprimentos globais sob controle total de custo.</p>
+        <ul>
+          <li>Planejamento de transporte de cargas</li>
+          <li>Gestão de operações de frete internacional</li>
+          <li>Logística global porta a porta</li>
+          <li>Inteligência em suprimentos</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18M12 3c-3 3.5-3 14 0 18"/></svg></div>
+        <span class="front-tag">Frente 2 · Negócios Internacionais</span>
+        <h3>Desenvolvimento &amp; Vendas Internacionais</h3>
+        <p>Crescimento além da fronteira com canais estruturados e previsíveis.</p>
+        <ul>
+          <li>Expansão de mercado com foco em LATAM</li>
+          <li>Canais de negociação B2B</li>
+          <li>Gestão de compras globais</li>
+          <li>Gestão de vendas globais</li>
+        </ul>
+      </div>
+      <div class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18V6l12-3v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="15" r="3"/></svg></div>
+        <span class="front-tag">As duas frentes</span>
+        <h3>Estratégia Digital &amp; Mercadológica</h3>
+        <p>Posicionamento e go-to-market para novos negócios transfronteiriços.</p>
+        <ul>
+          <li>Posicionamento de marca</li>
+          <li>Estratégias de go-to-market</li>
+          <li>Novos negócios transfronteiriços</li>
+          <li>Presença digital corporativa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CASE / LOGÍSTICA ======================= -->
+<section class="band band-dark">
+  <div class="wrap rv">
+    <small class="tag">Caso representativo · projeto de sourcing 2026</small>
+    <h2>Inteligência em suprimentos: até 73% de redução de custo de aquisição</h2>
+    <p>Substituição de fornecimento nacional por sourcing internacional direto de fábrica — com validação técnica antes do pedido e pagamento protegido de ponta a ponta.</p>
+    <div class="casegrid">
+      <div class="case"><b>11 fornecedores</b><span>triados e auditados em 3 portais B2B (Alibaba, Made-in-China, GlobalSources)</span></div>
+      <div class="case"><b>16–73%</b><span>faixa de economia por unidade, impostos brasileiros inclusos</span></div>
+      <div class="case"><b>45–60 dias</b><span>lead time porta a porta, com inspeção pré-embarque opcional</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BI ======================= -->
+<section id="bi">
+  <div class="wrap split">
+    <img class="rv" src="assets/dashboard.jpg" alt="Painel executivo de inteligência de negócios">
+    <div class="rv">
+      <span class="kicker">Inteligência de negócios</span>
+      <h2 class="h2">A diretoria decide com dados, não com opiniões</h2>
+      <div class="goldline"></div>
+      <p class="lead">Construímos a camada analítica que conecta mercado, custos e operação — do painel executivo ao dossiê de fornecedor.</p>
+      <ul class="checklist">
+        <li>Painéis executivos (BI) para diretoria e conselho</li>
+        <li>Benchmarking de preços e fornecedores globais</li>
+        <li>Custeio landed e simulação tributária de importação</li>
+        <li>Dossiês de fornecedores verificados e auditáveis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MÉTODO ======================= -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">O método HSN</span>
+      <h2 class="h2">Do diagnóstico à sustentação, em cinco etapas</h2>
+      <div class="goldline"></div>
+      <p class="lead">Um ciclo disciplinado que transforma inteligência em operação — e operação em resultado recorrente.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Diagnóstico &amp; inteligência</h3><p>Leitura de mercado, custos e riscos da operação atual.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Tese &amp; estratégia</h3><p>Plano de ação com metas, alvos e critérios de decisão.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Estruturação</h3><p>Fornecedores, parceiros, contratos e proteção de pagamento.</p></div>
+      <div class="step rv"><div class="n">04</div><h3>Execução cross-border</h3><p>Logística, compliance e nacionalização com curadoria HSN.</p></div>
+      <div class="step rv"><div class="n">05</div><h3>Sustentação &amp; governança</h3><p>BI, rituais de gestão e ciclos de melhoria contínua.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LATAM ======================= -->
+<section id="latam">
+  <div class="wrap grid2">
+    <div class="rv">
+      <span class="kicker">Desenvolvimento &amp; vendas internacionais</span>
+      <h2 class="h2">LATAM: o próximo mercado da sua operação</h2>
+      <div class="goldline"></div>
+      <p class="lead">Estruturamos canais B2B, alianças comerciais e operações de compra e venda globais para organizações em crescimento.</p>
+      <ul class="checklist">
+        <li>Mapeamento de mercado e elegibilidade de canais</li>
+        <li>Estruturação de distribuição e representação B2B</li>
+        <li>Negociação e gestão de contratos internacionais</li>
+        <li>Go-to-market com posicionamento de marca consistente</li>
+      </ul>
+      <span class="badge-latam">Foco de expansão · América Latina</span>
+    </div>
+    <figure class="frame rv">
+      <img src="assets/handshake.jpg" alt="Negociação B2B internacional">
+      <figcaption>Alianças comerciais · canais B2B</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= QUADRO DE CONSULTORES ======================= -->
+<section id="quadro">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kicker">Quadro de consultores</span>
+      <h2 class="h2">Multidisciplinar por desenho</h2>
+      <div class="goldline"></div>
+      <p class="lead">Cada projeto HSN é conduzido por um quadro próprio de profissionais qualificados — da estratégia societária ao despacho aduaneiro, uma única equipe cobrindo as duas frentes de atuação.</p>
+    </div>
+    <div class="team">
+      <div class="tcard rv"><b>Gestão Estratégica de Negócios</b><p>Tese de atuação, planejamento estratégico e gestão por resultados.</p></div>
+      <div class="tcard rv"><b>Comércio Exterior</b><p>Operações de importação e exportação, câmbio e trade finance.</p></div>
+      <div class="tcard rv"><b>Negócios Internacionais</b><p>Expansão cross-border, canais B2B e alianças comerciais.</p></div>
+      <div class="tcard rv"><b>Direito</b><p>Contratos internacionais, compliance e governança societária.</p></div>
+      <div class="tcard rv"><b>Despacho Aduaneiro</b><p>Classificação NCM, regimes aduaneiros, licenças e nacionalização.</p></div>
+      <div class="tcard rv"><b>Logística Internacional</b><p>Fretes multimodais, cargas internacionais e gestão porta a porta.</p></div>
+    </div>
+    <p class="team-foot">… e formações complementares mobilizadas conforme o escopo de cada projeto.</p>
+  </div>
+</section>
+
+<!-- ======================= PLANOS ======================= -->
+<section id="planos">
+  <div class="wrap">
+    <div class="rv" style="text-align:center">
+      <span class="kicker">Consultoria contínua</span>
+      <h2 class="h2" style="margin-left:auto;margin-right:auto;max-width:640px">Planos mensais de acompanhamento executivo</h2>
+      <div class="goldline" style="margin-left:auto;margin-right:auto"></div>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <span class="name">BRONZE</span>
+        <div class="price quote">Mediante<br>proposta</div>
+        <div class="tag2">Essencial — cotação de preço</div>
+        <ul>
+          <li class="grp">Gestão Corporativa</li>
+          <li>Relatório executivo mensal (BI)</li>
+          <li>1 reunião estratégica por mês</li>
+          <li>Suporte por e-mail · SLA 48 h</li>
+          <li class="grp">Negócios Internacionais</li>
+          <li>Cotação com até 5 fornecedores</li>
+          <li>Comparativo FOB mensal de mercado</li>
+        </ul>
+        <div class="note">Não inclui negociação ativa, validação de amostra nem gestão da importação.</div>
+        <a class="btn btn-navy" href="#contato" style="text-align:center">Começar no Bronze</a>
+      </div>
+      <div class="plan silver rv">
+        <span class="ribbon">RECOMENDADO</span>
+        <span class="name">SILVER</span>
+        <div class="price quote">Mediante<br>proposta</div>
+        <div class="tag2">Importação completa — ponta a ponta</div>
+        <ul>
+          <li class="lead">Tudo do Bronze, e mais:</li>
+          <li class="grp">Gestão Corporativa</li>
+          <li>Painéis BI sob medida + rituais de gestão (KPIs)</li>
+          <li>Otimização de processos e de decisão</li>
+          <li>2 reuniões/mês + alerta de câmbio</li>
+          <li class="grp">Negócios Internacionais</li>
+          <li>15+ fornecedores verificados por projeto</li>
+          <li>Negociação ativa com target price</li>
+          <li>Validação de amostra técnica</li>
+          <li>Gestão completa da importação — NCM, despacho, nacionalização</li>
+          <li>Inspeção pré-embarque inclusa</li>
+          <li>WhatsApp dedicado · SLA 4 h úteis</li>
+        </ul>
+        <a class="btn btn-gold" href="#contato" style="text-align:center">Assinar o Silver</a>
+      </div>
+      <div class="plan rv">
+        <span class="name">GOLD</span>
+        <div class="price quote">Mediante<br>proposta</div>
+        <div class="tag2">Corporativo — múltiplas linhas</div>
+        <ul>
+          <li class="lead">Tudo do Silver, e mais:</li>
+          <li class="grp">Gestão Corporativa</li>
+          <li>Diagnóstico organizacional e planejamento estratégico</li>
+          <li>PMO — gestão de projetos corporativos</li>
+          <li>Gestão orçamentária e treinamento da equipe</li>
+          <li>Relatório e reunião semanais</li>
+          <li class="grp">Negócios Internacionais</li>
+          <li>Regimes aduaneiros e benefícios fiscais (ex-tarifário, drawback)</li>
+          <li>Câmbio, trade finance e mitigação de riscos</li>
+          <li>Programação de entregas e estoque global</li>
+          <li>Auditoria remota de fornecedores</li>
+          <li>Suporte à garantia e pós-importação no Brasil</li>
+        </ul>
+        <div class="note">Indicado para operações com múltiplas famílias de produto.</div>
+        <a class="btn btn-navy" href="#contato" style="text-align:center">Falar sobre o Gold</a>
+      </div>
+    </div>
+    <p class="plans-foot">Planos mensais · contrato mínimo de 3 meses · <b style="color:var(--gold-dark)">valores mediante proposta comercial</b> personalizada ao escopo da sua operação.</p>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="rv" style="text-align:center">
+      <span class="kicker">Perguntas frequentes</span>
+      <h2 class="h2" style="margin-left:auto;margin-right:auto;max-width:560px">O que as diretorias costumam perguntar</h2>
+      <div class="goldline" style="margin-left:auto;margin-right:auto"></div>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary>Gestão corporativa ou negócios internacionais — o que exatamente a HSN faz? <span class="pm">+</span></summary>
+        <p>As duas frentes — e é essa a diferença. Um quadro multidisciplinar (gestão estratégica de negócios, comércio exterior, negócios internacionais, direito, despacho aduaneiro e logística internacional) cobre da estratégia societária ao desembaraço: a mesma equipe organiza a gestão da empresa e conduz a operação cross-border.</p>
+      </details>
+      <details>
+        <summary>Como começa um trabalho com a HSN Advisory? <span class="pm">+</span></summary>
+        <p>Com uma conversa executiva de diagnóstico — sem custo — para entender o momento da companhia, o objetivo cross-border e os gargalos. Dela sai uma proposta de escopo com etapas, prazos e critérios de resultado.</p>
+      </details>
+      <details>
+        <summary>Atendemos apenas empresas que querem importar? <span class="pm">+</span></summary>
+        <p>Não. Importação e logística internacional são uma das frentes. Tambemos estruturamos governança e BI corporativo, expansão de vendas em LATAM, canais B2B e estratégia de marca para novos negócios transfronteiriços.</p>
+      </details>
+      <details>
+        <summary>Qual a diferença entre projeto ponta a ponta e plano mensal? <span class="pm">+</span></summary>
+        <p>Projetos ponta a ponta (ex.: substituição de fornecimento por sourcing internacional) têm escopo e entrega definidos. Os planos mensais Bronze, Silver e Gold mantêm a HSN como área de inteligência e execução contínua da sua operação.</p>
+      </details>
+      <details>
+        <summary>Vocês trabalham com o nosso time interno? <span class="pm">+</span></summary>
+        <p>Sim — é o formato recomendado. Atuamos lado a lado com compras, logística, financeiro e comercial, transferindo método e governança para a equipe, com rituais de gestão e relatórios executivos.</p>
+      </details>
+      <details>
+        <summary>Como são tratados dados e confidencialidade? <span class="pm">+</span></summary>
+        <p>Todos os trabalhos são regidos por acordo de confidencialidade (NDA). Informações de custos, fornecedores e estratégia não são compartilhadas entre clientes, e os dossiês são entregues de forma auditável.</p>
+      </details>
+      <details>
+        <summary>O que precisamos ter para começar uma operação de importação? <span class="pm">+</span></summary>
+        <p>RAISIE/habilitação no Radar, classificação fiscal (NCM) confirmada e um despachante parceiro — indicamos e coordenamos. Do lado HSN, vêm a seleção de fornecedores, negociação, validação de amostra e a estrutura logística e tributária do projeto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section id="contato">
+  <div class="wrap rv">
+    <span class="kicker">Próximo passo</span>
+    <h2>Pronto para estruturar a próxima fase da sua operação?</h2>
+    <p>Conectamos clareza analítica a resultados materiais para consolidar a presença internacional de organizações em crescimento.</p>
+    <div class="hero-cta" style="justify-content:center">
+      <a class="btn btn-gold" href="mailto:comercial@hsnadvisory.com">Agendar diagnóstico gratuito</a>
+      <a class="btn btn-ghost" href="https://wa.me/5562992483408" target="_blank" rel="noopener">WhatsApp direto</a>
+    </div>
+    <p class="contact-line"><b><a href="mailto:comercial@hsnadvisory.com" style="color:var(--gold);text-decoration:none">comercial@hsnadvisory.com</a></b> &nbsp;·&nbsp; <b><a href="https://wa.me/5562992483408" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">Phone / WhatsApp +55 62 99248-3408</a></b></p>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:16px">
+          <img src="assets/logo.jpg" alt="HSN Advisory">
+          <div><b>HSN Advisory</b><span>Gestão Corporativa &amp; Negócios Internacionais</span></div>
+        </a>
+        <p style="font-size:13.5px;max-width:340px;margin-top:14px">Consultoria executiva na interseção entre inteligência estratégica, governança e expansão global.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <a href="#hsn">A HSN</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#metodo">Método</a>
+        <a href="#quadro">Quadro de consultores</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="mailto:comercial@hsnadvisory.com">comercial@hsnadvisory.com</a>
+        <a href="https://wa.me/5562992483408" target="_blank" rel="noopener">Phone / WhatsApp +55 62 99248-3408</a>
+        <a href="#latam">Brasil · Atendimento internacional</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span>© 2026 HSN Advisory — Consultoria Corporativa &amp; Negócios Internacionais. Todos os direitos reservados.</span>
+      <span>*Redução observada em projeto de sourcing (2026) — resultados variam por projeto.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// nav sólida ao rolar
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// FAQ: abre um por vez
+document.querySelectorAll('#faq details').forEach(d=>d.addEventListener('toggle',()=>{
+  if(d.open) document.querySelectorAll('#faq details').forEach(o=>{if(o!==d)o.open=false});
+}));
+</script>
+</body>
+</html>
