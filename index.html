@@ -83,9 +83,10 @@ header.hero::before{content:"";position:absolute;inset:0;pointer-events:none;bac
 .pillars .dot{flex:0 0 auto;width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:9px}
 .pillars b{color:var(--navy);font-size:16px}
 .pillars p{font-size:14.5px;color:var(--muted)}
-.frame{position:relative}
+.frame{position:relative;margin:0 22px 22px 0}
 .frame img{border-radius:6px;box-shadow:0 30px 60px rgba(13,27,42,.22);position:relative;z-index:1}
 .frame::after{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--gold);border-radius:6px;z-index:0}
+@media(max-width:880px){.frame{margin-right:0}.frame::after{inset:14px}}
 .frame figcaption{margin-top:16px;font-size:12.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .fronts{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:64px}
 .front{border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;padding:30px 30px 26px;background:#fff}
