@@ -211,6 +211,29 @@ footer a{color:#9AA7B8;text-decoration:none;display:block;padding:5px 0;font-siz
 footer a:hover{color:var(--gold)}
 .fbottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(230,233,236,.1);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px}
 
+/* ---------- modal diagnóstico ---------- */
+.modal{position:fixed;inset:0;z-index:90;background:rgba(13,27,42,.68);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:22px}
+.modal[hidden]{display:none}
+.modal-card{background:#fff;border-radius:10px;max-width:660px;width:100%;max-height:92vh;overflow-y:auto;padding:38px 40px 32px;position:relative;box-shadow:0 40px 90px rgba(13,27,42,.4)}
+.modal-x{position:absolute;top:14px;right:14px;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#fff;font-size:20px;color:var(--muted);cursor:pointer;line-height:1}
+.modal-x:hover{border-color:var(--gold);color:var(--gold-dark)}
+.modal-card h3{font-family:var(--serif);font-size:27px;color:var(--navy);font-weight:600;margin:8px 0 6px}
+.modal-sub{font-size:14px;color:var(--muted);max-width:480px;margin-bottom:20px}
+.fgrid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:flex;flex-direction:column;gap:5px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:12px;font-weight:600;color:var(--navy);letter-spacing:.02em}
+.fld input,.fld select,.fld textarea{font-family:var(--sans);font-size:14.5px;color:var(--ink);padding:11px 12px;border:1px solid var(--line);border-radius:5px;background:#fff;outline:none;transition:border-color .15s,box-shadow .15s}
+.fld textarea{resize:vertical;min-height:84px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(224,169,79,.16)}
+.lgpd{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);margin:14px 0 4px}
+.lgpd input{margin-top:2px;accent-color:var(--gold-d)}
+.form-foot{display:flex;align-items:center;gap:14px;margin-top:14px;flex-wrap:wrap}
+.form-note{font-size:11.5px;color:var(--muted)}
+.form-ok{text-align:center;padding:34px 10px}
+.form-ok .okicon{width:64px;height:64px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:30px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-weight:700}
+@media(max-width:620px){.fgrid2{grid-template-columns:1fr}.modal-card{padding:28px 20px}}
+
 /* ---------- reveal ---------- */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .rv.on{opacity:1;transform:none}
@@ -282,7 +305,7 @@ footer a:hover{color:var(--gold)}
     <h1>Clareza analítica,<br>resultados <em>materiais</em> na expansão global</h1>
     <p>A HSN Advisory é uma consultoria executiva especializada em Gestão Corporativa e Negócios Internacionais. Atuamos na interseção entre inteligência estratégica, governança e expansão global, apoiando diretorias e conselhos no desenvolvimento de operações cross-border sustentáveis e de alto rendimento.</p>
     <div class="hero-cta">
-      <a class="btn btn-gold" href="#contato">Agendar uma conversa</a>
+      <a class="btn btn-gold" href="#diagnostico" data-open-modal>Agendar diagnóstico gratuito</a>
       <a class="btn btn-ghost" href="#servicos">Conhecer os serviços</a>
     </div>
   </div>
@@ -606,12 +629,74 @@ footer a:hover{color:var(--gold)}
     <h2>Pronto para estruturar a próxima fase da sua operação?</h2>
     <p>Conectamos clareza analítica a resultados materiais para consolidar a presença internacional de organizações em crescimento.</p>
     <div class="hero-cta" style="justify-content:center">
-      <a class="btn btn-gold" href="mailto:comercial@hsnadvisory.com">Agendar diagnóstico gratuito</a>
+      <a class="btn btn-gold" href="#diagnostico" data-open-modal>Agendar diagnóstico gratuito</a>
       <a class="btn btn-ghost" href="https://wa.me/5562992483408" target="_blank" rel="noopener">WhatsApp direto</a>
     </div>
     <p class="contact-line"><b><a href="mailto:comercial@hsnadvisory.com" style="color:var(--gold);text-decoration:none">comercial@hsnadvisory.com</a></b> &nbsp;·&nbsp; <b><a href="https://wa.me/5562992483408" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">Phone / WhatsApp +55 62 99248-3408</a></b></p>
   </div>
 </section>
+
+<!-- ======================= MODAL · DIAGNÓSTICO GRATUITO ======================= -->
+<div class="modal" id="modal-diag" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mdr-title">
+    <button class="modal-x" id="mdr-close" type="button" aria-label="Fechar">&times;</button>
+    <span class="kicker">Diagnóstico gratuito</span>
+    <h3 id="mdr-title">Vamos mapear a sua operação</h3>
+    <p class="modal-sub">Em até 1 dia útil, um consultor HSN retorna com uma leitura executiva do seu cenário e os próximos passos. Sem custo, sem compromisso.</p>
+    <form id="form-diag" novalidate>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="fgrid2">
+        <div class="fld"><label for="f-nome">Nome completo *</label>
+          <input id="f-nome" name="Nome" required placeholder="Como devemos te chamar"></div>
+        <div class="fld"><label for="f-cargo">Cargo</label>
+          <input id="f-cargo" name="Cargo" placeholder="Ex.: Diretor Comercial"></div>
+        <div class="fld"><label for="f-empresa">Empresa *</label>
+          <input id="f-empresa" name="Empresa" required placeholder="Razão social ou nome fantasia"></div>
+        <div class="fld"><label for="f-porte">Porte da empresa</label>
+          <select id="f-porte" name="Porte">
+            <option value="">Selecione…</option>
+            <option>MEI / Autônomo</option>
+            <option>ME — até R$ 4,8 mi/ano</option>
+            <option>EPP — R$ 4,8 a 16 mi/ano</option>
+            <option>Média — R$ 16 a 300 mi/ano</option>
+            <option>Grande — acima de R$ 300 mi/ano</option>
+          </select></div>
+        <div class="fld"><label for="f-email">E-mail corporativo *</label>
+          <input id="f-email" type="email" name="E-mail" required placeholder="nome@empresa.com.br"></div>
+        <div class="fld"><label for="f-fone">Telefone / WhatsApp *</label>
+          <input id="f-fone" name="WhatsApp" required inputmode="tel" placeholder="(00) 00000-0000"></div>
+        <div class="fld"><label for="f-segmento">Segmento</label>
+          <select id="f-segmento" name="Segmento">
+            <option value="">Selecione…</option>
+            <option>Saúde / Hospitalar</option>
+            <option>Indústria / Manufatura</option>
+            <option>Distribuição / Atacado</option>
+            <option>Agro</option>
+            <option>Tecnologia / Serviços B2B</option>
+            <option>Comércio / Varejo</option>
+            <option>Outro</option>
+          </select></div>
+        <div class="fld"><label for="f-frente">Frente de interesse *</label>
+          <select id="f-frente" name="Frente" required>
+            <option value="">Selecione…</option>
+            <option>Gestão Corporativa &amp; Estratégia</option>
+            <option>Comércio Internacional &amp; Logística</option>
+            <option>Desenvolvimento &amp; Vendas Internacionais (LATAM)</option>
+            <option>Estratégia Digital &amp; Mercadológica</option>
+            <option>Mais de uma frente / não sei ainda</option>
+          </select></div>
+        <div class="fld full"><label for="f-msg">Como podemos ajudar?</label>
+          <textarea id="f-msg" name="Objetivo" placeholder="Ex.: importar equipamentos com menor custo, estruturar exportação para LATAM, organizar a gestão comercial…"></textarea></div>
+      </div>
+      <label class="lgpd"><input type="checkbox" required id="f-lgpd">
+        <span>Autorizo o contato da HSN Advisory pelos dados informados e concordo com o uso das informações exclusivamente para este atendimento (LGPD — Lei 13.709/2018). *</span></label>
+      <div class="form-foot">
+        <button class="btn btn-gold" type="submit" id="f-send" style="border:0;cursor:pointer">Solicitar diagnóstico gratuito</button>
+        <span class="form-note">Resposta em até 1 dia útil · comercial@hsnadvisory.com.br</span>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- ======================= FOOTER ======================= -->
 <footer>
@@ -658,6 +743,40 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 document.querySelectorAll('#faq details').forEach(d=>d.addEventListener('toggle',()=>{
   if(d.open) document.querySelectorAll('#faq details').forEach(o=>{if(o!==d)o.open=false});
 }));
+// Modal de diagnóstico
+const modal=document.getElementById('modal-diag');
+const openModal=e=>{e.preventDefault();modal.hidden=false;document.body.style.overflow='hidden'};
+const closeModal=()=>{modal.hidden=true;document.body.style.overflow=''};
+document.querySelectorAll('[data-open-modal]').forEach(b=>b.addEventListener('click',openModal));
+document.getElementById('mdr-close').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeModal()});
+if(location.hash==='#diagnostico'){modal.hidden=false}
+// Envio: FormSubmit (e-mail) com fallback mailto
+document.getElementById('form-diag').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.target;
+  if(!form.checkValidity()){form.reportValidity();return}
+  const data=Object.fromEntries(new FormData(form).entries());
+  const send=document.getElementById('f-send');
+  send.disabled=true;send.textContent='Enviando…';
+  const mailtoFallback=()=>{
+    const body=encodeURIComponent(
+      'Solicitação de diagnóstico gratuito pelo site:\n\n'+
+      Object.entries(data).filter(([k])=>!k.startsWith('_')).map(([k,v])=>k+': '+(v||'—')).join('\n'));
+    location.href='mailto:comercial@hsnadvisory.com.br?subject='+encodeURIComponent('Diagnóstico gratuito — Site HSN Advisory')+'&body='+body;
+  };
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/comercial@hsnadvisory.com.br',{
+      method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({_subject:'Diagnóstico gratuito — Site HSN Advisory',_template:'table',_captcha:'false',_replyto:data['E-mail'],...data})});
+    if(!r.ok)throw new Error('falha envio');
+    document.querySelector('.modal-card').innerHTML='<div class="form-ok"><div class="okicon">✓</div>'+
+      '<h3>Recebemos a sua solicitação!</h3>'+
+      '<p class="modal-sub" style="margin:10px auto 22px">Um consultor HSN Advisory entrará em contato em até 1 dia útil pelo e-mail ou WhatsApp informados.</p>'+
+      '<button class="btn btn-navy" type="button" onclick="document.getElementById(\'modal-diag\').hidden=true;location.hash=\'\';location.reload()">Fechar</button></div>';
+  }catch(err){ send.disabled=false;send.textContent='Solicitar diagnóstico gratuito'; mailtoFallback(); }
+});
 </script>
 </body>
 </html>
